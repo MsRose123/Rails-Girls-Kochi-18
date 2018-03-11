@@ -1,0 +1,11 @@
+<h1>Editing Blog</h1>
+
+<%= render 'form', blog: @blog %>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@blog.picture_url, width: 600) if @blog.picture.present? %>
+</p>
+
+<%= link_to 'Show', @blog %> |
+<%= link_to 'Back', blogs_path %>
